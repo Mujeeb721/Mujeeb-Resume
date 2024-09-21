@@ -1,0 +1,284 @@
+/*imported font styles from websites*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+/*whole web page pattern*/
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;     /*for keeping width unchange*/
+}
+/*Global varibles same as function for calling*/
+:root{
+	--Primary-color : #ff7613;
+	--text-color : #443b3b;
+}
+/*html tag aplies on whole document*/
+html{
+	font-size: 10px;
+}
+body{
+	/*whole family of fonts throughout cv*/
+	font-family: Inter , serif;
+	background-color: rgba(248, 245, 245, 0.951);
+	color: white;
+}
+.certificate{
+	color: #85d2f0;
+	
+}
+
+a{
+	text-decoration: none;
+	color: aliceblue;
+
+}
+
+/*group for making such group into 2 columns*/
+.group-1
+{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.group-2
+{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.group-3
+{
+	max-width: 700px;
+	width: 100%;
+	grid-column: 1/-1;
+	flex-direction: row;        /*for making them in a same row*/
+	display: flex;
+	gap: 25rem;
+}
+.group-3 >div{
+	flex : 1;
+}
+.discription{
+	font-size: 1.2rem;
+	color:var(--text-color); 
+	font-weight: 750;   /*variable which ws declared in root*/
+}
+.item_pretitle{
+	font-size: 1.5rem;
+	color: var(--text-color);
+	font-weight: 600; 			/*font weight mean daarkness of font*/
+}
+
+/*expertise/reference/all headings*/
+.title
+{
+	font-size: 1.5rem;
+ 	margin-bottom: 0.7rem;      /*sapace under it*/
+	color: var(--Primary-color);
+	text-transform: uppercase;  /*transform into uppercase*/
+	font-weight: 750;
+}
+.ref_name1
+{
+	color: #443b3b;
+	margin-left: 2rem;
+	font-size: 1.5rem;
+	font-weight: 450;
+	margin-top: 0.4rem;
+}
+.discription_1
+{
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-left: 2rem;
+	color: var(--text-color);
+	margin-top: 0.3rem;
+}
+.discription_2
+{
+
+	color: var(--text-color);
+	margin-bottom: 0.8rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-top: 0.2rem;
+}
+/*Reference*/
+.ref_name
+{
+	color: #443b3b;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+	font-weight: 700;
+}
+.Profile
+{
+	font-size: 1.2rem;
+	background-color: rgb(247, 241, 241);
+	margin-bottom: 3rem;
+}
+
+
+/*ending of global css*/
+/*square to circle image*/
+.Profile_profileImg img
+{
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+}
+img{
+	width: 100%;
+}
+.Container{
+	max-width: 1000px;
+	width: 90%;
+	/*for center*/
+	margin: 0 auto;
+	/*whole cv will be inside  grid*/
+	display: grid;
+	/*all aroundpadding*/
+	padding: 5rem;
+	background: #f7eeee;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+.Profile
+{
+	grid-column: 1/-1;
+	margin-bottom: 2rem;
+}
+.Profile_container{
+	/*rows into column done by flex*/
+	display: flex;
+	gap: 2rem;
+}
+.Profile_name
+{
+	font-size: 150;
+	/*font-size range between 2rem to 7 rem based on veiw size*/
+	font-size: clamp(2rem,8vw,6rem);
+	/*transform text to capital letters(uppercse)*/
+	text-transform: uppercase;
+	/*if any world after name then goes to next line*/
+	display: block;
+	/*get bottom line upwards*/
+	margin-bottom: 0.3rem;
+	/*called variable globally as in rrot*/
+	color: var(--Primary-color);
+}
+.Profile_title{
+	font-weight: bolder;
+	font-size: 2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: clamp(0.1rem,3vw,2rem);
+	margin-bottom: 0.3rem;
+	display: block;
+	color: #0a0400;
+}
+
+.skill_list
+{
+	font-size: 1.2rem;
+	margin-left: 2rem;
+	line-height: 1.4;
+}
+/*Education*/
+.edu_item
+{
+	margin-top: 2rem;
+}
+/*hobbies*/
+.hobi_list
+{
+	font-size: 1.2rem;
+	margin-left: 2rem;
+	line-height: 1.6rem;
+}
+hr
+{
+	/*for both columns*/
+	grid-column: 1/-1;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(61, 57, 57, 0.375);
+}	
+.discription_3
+{
+	color: var(--text-color);
+	font-weight: 700;
+	font-size: 1.2rem;
+	
+}
+.contact-info
+{
+	font-size: 1.2rem;
+	line-height: 1.9rem;
+}
+.social-info
+{
+	margin-top: 1rem;
+}
+.info-item
+{
+	/*as before social are in colun after flex they
+	would become row*/
+	margin-bottom: 1.2rem;
+	display: flex;
+	color: var(--text-color);
+	/*gap between logo and text*/
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 1.2rem;
+}
+/*when cursor is on the link*/
+.info-item:hover
+{
+	color: var(--Primary-color);
+}
+@media only screen and (max-width: 768px) {
+	.Container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.group-3 {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 768px) {
+	hr{
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.Profile {
+		margin-bottom: 0;
+	}
+}
+@media only screen and (max-width: 768px){
+	.Profile_container{
+    	flex-direction: column;
+	}	
+}
+
+@media only screen and (max-width: 768px){
+	.group-3{
+    	gap: 5rem;
+	}	
+	.group-2{
+		margin-top: -4.5rem;
+	}
+	.contac{
+		margin-top: -3.5rem;
+		margin-bottom: -3rem;
+	}
+}
